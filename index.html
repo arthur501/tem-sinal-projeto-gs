@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tem Sinal? | Descubra a internet da sua região</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="marca">
+        <img src="img/logo.png" alt="Logo Tem Sinal?">
+        <span>Tem Sinal?</span>
+      </a>
+      <nav class="menu">
+        <a href="index.html" class="ativo">Buscar</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="demanda.html" class="botao">Registrar demanda</a>
+        <div class="acessibilidade">
+          <button id="fonteMenos" title="Diminuir letra" aria-label="Diminuir letra">A-</button>
+          <button id="fonteMais" title="Aumentar letra" aria-label="Aumentar letra">A+</button>
+          <button id="contraste" title="Alto contraste" aria-label="Alto contraste">Contraste</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="destaque">
+        <div>
+          <h1>Descubra quais opções de internet existem na sua região</h1>
+          <p class="subtitulo">Digite seu CEP e encontre as melhores opções de conexão perto de você.</p>
+
+          <form id="formBusca" class="campo-cep">
+            <input id="cep" type="text" inputmode="numeric" placeholder="Digite seu CEP..." aria-label="CEP" autocomplete="postal-code">
+            <button class="botao" type="submit">Buscar</button>
+          </form>
+          <p id="erro" class="erro" role="alert"></p>
+          <p class="dica">
+            Exemplos para testar:
+            <button type="button" data-cep="01310-100">São Paulo</button>,
+            <button type="button" data-cep="12530-000">Cunha</button>,
+            <button type="button" data-cep="18330-000">Iporanga</button>
+          </p>
+        </div>
+
+        <img class="ilustracao" src="img/internet.png" alt="Ilustração de uma casa com Wi-Fi, um satélite e uma antena">
+      </section>
+
+      <section class="tipos">
+        <div class="tipo">
+          <img src="img/movel.png" alt="">
+          <h3>Rede Móvel</h3>
+          <p>Internet pelo chip do celular (4G/5G)</p>
+        </div>
+        <div class="tipo">
+          <img src="img/fibra.png" alt="">
+          <h3>Cabo/Fibra</h3>
+          <p>Internet fixa por cabo, instalada em casa</p>
+        </div>
+        <div class="tipo">
+          <img src="img/radio.png" alt="">
+          <h3>Rádio</h3>
+          <p>Sinal de uma antena próxima, comum na zona rural</p>
+        </div>
+        <div class="tipo">
+          <img src="img/satelite.png" alt="">
+          <h3>Satélite</h3>
+          <p>Funciona em qualquer lugar, com antena própria</p>
+        </div>
+      </section>
+
+      <a href="demanda.html" class="aviso">Ainda não encontrou uma opção? <strong>Registre sua demanda</strong></a>
+
+    </div>
+  </main>
+
+  <footer class="rodape">
+    Tem Sinal? · Protótipo Global Solution 2026 · Dados simulados para demonstração
+  </footer>
+
+  <script src="js/comum.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

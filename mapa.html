@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Demanda | Tem Sinal?</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="lib/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="marca">
+        <img src="img/logo.png" alt="Logo Tem Sinal?">
+        <span>Tem Sinal?</span>
+      </a>
+      <nav class="menu">
+        <a href="index.html">Buscar</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="mapa.html" class="ativo">Mapa</a>
+        <a href="demanda.html" class="botao">Registrar demanda</a>
+        <div class="acessibilidade">
+          <button id="fonteMenos" title="Diminuir letra" aria-label="Diminuir letra">A-</button>
+          <button id="fonteMais" title="Aumentar letra" aria-label="Aumentar letra">A+</button>
+          <button id="contraste" title="Alto contraste" aria-label="Alto contraste">Contraste</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <a href="index.html" class="voltar">← Voltar</a>
+
+      <h1>Mapa de Demanda</h1>
+      <p class="subtitulo">Veja onde mais pessoas estão buscando internet.</p>
+
+      <div class="controle-camada">
+        <button id="verCirculos" class="ativo">Por cidade</button>
+        <button id="verCalor">Mapa de calor</button>
+      </div>
+
+      <div class="mapa-area">
+        <div id="mapa" aria-label="Mapa de demanda por internet"></div>
+
+        <aside class="lateral">
+          <div class="legenda">
+            <h3>Demanda por internet</h3>
+            <ul>
+              <li><span class="bolinha" style="background:#1f3a5f"></span> Alta demanda</li>
+              <li><span class="bolinha" style="background:#2e7dd7"></span> Média demanda</li>
+              <li><span class="bolinha" style="background:#a9c8ee"></span> Baixa demanda</li>
+            </ul>
+          </div>
+
+          <div class="ranking">
+            <h3>Cidades com mais pedidos</h3>
+            <ol id="ranking"></ol>
+            <p class="dica" id="minhas"></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    Tem Sinal? · Protótipo Global Solution 2026 · Dados simulados para demonstração
+  </footer>
+
+  <script src="lib/leaflet.js"></script>
+  <script src="lib/leaflet-heat.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/mapa.js"></script>
+</body>
+</html>

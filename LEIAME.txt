@@ -1,0 +1,73 @@
+TEM SINAL? - Protótipo Global Solution 2026
+==========================================
+
+COMO ABRIR
+----------
+Não abra o index.html com dois cliques: o navegador bloqueia a leitura
+do dados.json quando o site é aberto direto do arquivo.
+
+Use uma destas opções:
+1. VS Code + extensão "Live Server": clique com o botão direito no
+   index.html e escolha "Open with Live Server".
+2. GitHub Pages: suba a pasta para um repositório e ative o Pages
+   (Settings > Pages). Ele gera um link para abrir até no celular.
+
+O mapa precisa de internet para carregar o fundo (OpenStreetMap).
+
+
+TELAS
+-----
+index.html       Home: busca por CEP e explicação dos 4 tipos de conexão
+resultados.html  Resultado do CEP: cards por tipo, operadoras e status
+demanda.html     Registrar demanda ("Quero internet aqui"), com aceite LGPD
+mapa.html        Mapa de demanda: por cidade ou mapa de calor
+sobre.html       Problema, como funciona, ODS e Política de Privacidade
+
+
+ESTRUTURA
+---------
+css/style.css      Visual do site (cores, layout, versão para celular)
+js/comum.js        Funções usadas em todas as páginas (CEP, dados,
+                   demandas, acessibilidade)
+js/home.js         Lógica da home
+js/resultados.js   Monta os cards de resultado
+js/demanda.js      Salva a demanda no navegador (localStorage)
+js/mapa.js         Mapa, coordenadas das cidades e demanda simulada
+dados/dados.json   Dados simulados do grupo
+img/               Logo, ilustração e ícones
+lib/               Leaflet e Leaflet.heat (biblioteca de mapas)
+
+
+COMO FUNCIONA A BUSCA POR CEP
+-----------------------------
+1. Se o CEP for um dos "cep_exemplo" do dados.json, a cidade é
+   encontrada direto (funciona até sem internet).
+2. Se não for, o site consulta a API gratuita ViaCEP para descobrir a
+   cidade e procura essa cidade no dados.json.
+   Ex.: qualquer CEP de Campinas (13xxx-xxx) mostra os dados de Campinas.
+3. Se a cidade não estiver no dados.json, o site avisa e sugere
+   registrar a demanda.
+
+CEPs para a demonstração:
+  01310-100 São Paulo (quase tudo disponível)
+  12530-000 Cunha (zona rural, opções limitadas)
+  18330-000 Iporanga (só satélite disponível)
+
+
+ACESSIBILIDADE
+--------------
+Botões A- / A+ mudam o tamanho da letra e "Contraste" ativa o alto
+contraste. As escolhas ficam salvas no navegador.
+
+
+O QUE É SIMULADO
+----------------
+- Operadoras e status de cada cidade (dados.json)
+- Quantidade de pedidos já existentes por cidade (DEMANDA_SIMULADA,
+  no início do js/mapa.js)
+- As demandas registradas ficam só no navegador de quem registrou.
+  Para zerar: F12 > Application > Local Storage > apagar
+  "temSinal_demandas".
+
+Para adicionar uma cidade: inclua no dados.json e coloque a latitude e
+longitude em COORDENADAS (js/mapa.js) para ela aparecer no mapa.

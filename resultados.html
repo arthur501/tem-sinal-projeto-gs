@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados | Tem Sinal?</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="marca">
+        <img src="img/logo.png" alt="Logo Tem Sinal?">
+        <span>Tem Sinal?</span>
+      </a>
+      <nav class="menu">
+        <a href="index.html" class="ativo">Buscar</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="demanda.html" class="botao">Registrar demanda</a>
+        <div class="acessibilidade">
+          <button id="fonteMenos" title="Diminuir letra" aria-label="Diminuir letra">A-</button>
+          <button id="fonteMais" title="Aumentar letra" aria-label="Aumentar letra">A+</button>
+          <button id="contraste" title="Alto contraste" aria-label="Alto contraste">Contraste</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <a href="index.html" class="voltar">← Voltar</a>
+
+      <h1>Resultados da sua busca</h1>
+      <p class="local" id="local">Buscando...</p>
+
+      <p class="resumo" id="resumo" hidden></p>
+
+      <section class="cards" id="cards"></section>
+
+      <p class="regional" id="regional" hidden>* Provedor regional (fictício, criado para a demonstração).</p>
+
+      <div class="centro">
+        <a id="queroInternet" href="demanda.html" class="botao grande">Quero internet aqui</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    Tem Sinal? · Protótipo Global Solution 2026 · Dados simulados para demonstração
+  </footer>
+
+  <script src="js/comum.js"></script>
+  <script src="js/resultados.js"></script>
+</body>
+</html>

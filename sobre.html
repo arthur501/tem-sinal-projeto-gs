@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre | Tem Sinal?</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="marca">
+        <img src="img/logo.png" alt="Logo Tem Sinal?">
+        <span>Tem Sinal?</span>
+      </a>
+      <nav class="menu">
+        <a href="index.html">Buscar</a>
+        <a href="sobre.html" class="ativo">Sobre</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="demanda.html" class="botao">Registrar demanda</a>
+        <div class="acessibilidade">
+          <button id="fonteMenos" title="Diminuir letra" aria-label="Diminuir letra">A-</button>
+          <button id="fonteMais" title="Aumentar letra" aria-label="Aumentar letra">A+</button>
+          <button id="contraste" title="Alto contraste" aria-label="Alto contraste">Contraste</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container texto">
+      <a href="index.html" class="voltar">← Voltar</a>
+
+      <h1>Sobre o Tem Sinal?</h1>
+      <p class="subtitulo">Informação simples sobre internet para quem mais precisa dela.</p>
+
+      <h2>O problema</h2>
+      <p>Em 2025, o Brasil ainda tinha 4 milhões de domicílios sem nenhum acesso à internet (IBGE). A rede móvel funcionava em 96,1% dos domicílios urbanos, mas em apenas 68,0% dos rurais.</p>
+      <p>Parte do problema é de informação: cada operadora tem o seu próprio mapa, o painel da Anatel mostra só a rede móvel em linguagem técnica, e os provedores regionais, que atendem o interior e a periferia, quase nunca aparecem numa busca.</p>
+
+      <h2>Como funciona</h2>
+      <ul>
+        <li>Você digita o seu CEP.</li>
+        <li>Vê as opções disponíveis por tipo: rede móvel, cabo/fibra, rádio e satélite.</li>
+        <li>Se nenhuma servir, toca em <strong>"Quero internet aqui"</strong> e o pedido vira dado para operadoras, provedores e prefeituras decidirem onde expandir.</li>
+      </ul>
+
+      <h2>Objetivos de Desenvolvimento Sustentável</h2>
+      <ul>
+        <li><strong>ODS 9:</strong> ampliar o acesso às tecnologias de informação e comunicação.</li>
+        <li><strong>ODS 10:</strong> reduzir a desigualdade de informação entre cidade e campo.</li>
+        <li><strong>ODS 11:</strong> apoiar a economia entre áreas urbanas e rurais.</li>
+      </ul>
+
+      <h2 id="privacidade">Política de Privacidade (LGPD)</h2>
+      <p>Ao registrar uma demanda, guardamos apenas o CEP, a cidade, o tipo de internet desejado e a data. Não pedimos nome, telefone, e-mail ou qualquer dado que identifique você. As informações são usadas somente de forma agrupada, para mostrar no mapa onde falta internet.</p>
+      <p>Neste protótipo, os pedidos ficam salvos apenas no seu próprio navegador.</p>
+
+      <h2>Sobre os dados</h2>
+      <p>Todos os dados deste protótipo são <strong>simulados</strong> para a demonstração da Global Solution. Na versão real, viriam dos dados abertos da Anatel e do cadastro de provedores. Provedores marcados com * são fictícios.</p>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    Tem Sinal? · Protótipo Global Solution 2026 · Dados simulados para demonstração
+  </footer>
+
+  <script src="js/comum.js"></script>
+</body>
+</html>

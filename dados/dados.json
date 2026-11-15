@@ -1,0 +1,386 @@
+{
+  "fonte": "Dados SIMULADOS para o protótipo da Global Solution. Na versão real, viriam dos dados abertos da Anatel e do cadastro de provedores.",
+  "legenda_status": {
+    "Disponível": "Há oferta na cidade",
+    "Limitada": "Só em parte da cidade ou com sinal fraco",
+    "Não encontrado": "Nenhuma oferta encontrada"
+  },
+  "observacao_provedores": "Nomes com * são provedores regionais fictícios, criados para a demonstração.",
+  "atualizado_em": "2026-11-15",
+  "cidades": [
+    {
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "cep_exemplo": "01310-100",
+      "perfil": "capital",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "TIM"
+          ],
+          "observacao": "4G e 5G"
+        },
+        "cabo_fibra": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "TIM"
+          ]
+        },
+        "radio": {
+          "status": "Limitada",
+          "operadoras": [
+            "MetrôNet Rádio*"
+          ],
+          "observacao": "Só em bairros da periferia"
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "Campinas",
+      "uf": "SP",
+      "cep_exemplo": "13015-904",
+      "perfil": "interior",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "TIM"
+          ],
+          "observacao": "4G e 5G"
+        },
+        "cabo_fibra": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "CampiFibra*"
+          ]
+        },
+        "radio": {
+          "status": "Limitada",
+          "operadoras": [
+            "CampiFibra*"
+          ],
+          "observacao": "Só na zona rural do município"
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "Ribeirão Preto",
+      "uf": "SP",
+      "cep_exemplo": "14010-140",
+      "perfil": "interior",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "TIM"
+          ],
+          "observacao": "4G e 5G"
+        },
+        "cabo_fibra": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "RibeirãoNet*"
+          ]
+        },
+        "radio": {
+          "status": "Limitada",
+          "operadoras": [
+            "RibeirãoNet*"
+          ],
+          "observacao": "Só na zona rural do município"
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "Sorocaba",
+      "uf": "SP",
+      "cep_exemplo": "18013-280",
+      "perfil": "interior",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "TIM"
+          ],
+          "observacao": "4G e 5G"
+        },
+        "cabo_fibra": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "SoroFibra*"
+          ]
+        },
+        "radio": {
+          "status": "Limitada",
+          "operadoras": [
+            "SoroFibra*"
+          ],
+          "observacao": "Só nos bairros afastados"
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "São José dos Campos",
+      "uf": "SP",
+      "cep_exemplo": "12209-530",
+      "perfil": "interior",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "TIM"
+          ],
+          "observacao": "4G e 5G"
+        },
+        "cabo_fibra": {
+          "status": "Disponível",
+          "operadoras": [
+            "Claro",
+            "Vivo",
+            "ValeFibra*"
+          ]
+        },
+        "radio": {
+          "status": "Limitada",
+          "operadoras": [
+            "ValeFibra*"
+          ],
+          "observacao": "Só na zona rural do município"
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "Registro",
+      "uf": "SP",
+      "cep_exemplo": "11900-000",
+      "perfil": "interior",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Disponível",
+          "operadoras": [
+            "Vivo",
+            "Claro",
+            "TIM"
+          ],
+          "observacao": "4G"
+        },
+        "cabo_fibra": {
+          "status": "Limitada",
+          "operadoras": [
+            "RibeiraNet*"
+          ],
+          "observacao": "Só no centro e bairros próximos"
+        },
+        "radio": {
+          "status": "Disponível",
+          "operadoras": [
+            "RibeiraNet*"
+          ]
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "Cunha",
+      "uf": "SP",
+      "cep_exemplo": "12530-000",
+      "perfil": "interior rural",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Limitada",
+          "operadoras": [
+            "Vivo",
+            "TIM"
+          ],
+          "observacao": "4G só na área urbana"
+        },
+        "cabo_fibra": {
+          "status": "Limitada",
+          "operadoras": [
+            "SerraMar Net*"
+          ],
+          "observacao": "Só no centro da cidade"
+        },
+        "radio": {
+          "status": "Disponível",
+          "operadoras": [
+            "SerraMar Net*"
+          ]
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "São Luiz do Paraitinga",
+      "uf": "SP",
+      "cep_exemplo": "12140-000",
+      "perfil": "interior rural",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Limitada",
+          "operadoras": [
+            "Vivo",
+            "Claro"
+          ],
+          "observacao": "Sinal fraco fora do centro"
+        },
+        "cabo_fibra": {
+          "status": "Limitada",
+          "operadoras": [
+            "ParaitingaNet*"
+          ],
+          "observacao": "Só no centro histórico"
+        },
+        "radio": {
+          "status": "Disponível",
+          "operadoras": [
+            "ParaitingaNet*"
+          ]
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "Monteiro Lobato",
+      "uf": "SP",
+      "cep_exemplo": "12250-000",
+      "perfil": "interior rural",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Limitada",
+          "operadoras": [
+            "Vivo"
+          ],
+          "observacao": "Sinal fraco"
+        },
+        "cabo_fibra": {
+          "status": "Não encontrado",
+          "operadoras": []
+        },
+        "radio": {
+          "status": "Não encontrado",
+          "operadoras": []
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    },
+    {
+      "cidade": "Iporanga",
+      "uf": "SP",
+      "cep_exemplo": "18330-000",
+      "perfil": "interior rural",
+      "conexoes": {
+        "rede_movel": {
+          "status": "Limitada",
+          "operadoras": [
+            "Vivo"
+          ],
+          "observacao": "Sinal fraco, só na área urbana"
+        },
+        "cabo_fibra": {
+          "status": "Não encontrado",
+          "operadoras": []
+        },
+        "radio": {
+          "status": "Não encontrado",
+          "operadoras": []
+        },
+        "satelite": {
+          "status": "Disponível",
+          "operadoras": [
+            "Starlink",
+            "HughesNet",
+            "Viasat"
+          ]
+        }
+      }
+    }
+  ]
+}
