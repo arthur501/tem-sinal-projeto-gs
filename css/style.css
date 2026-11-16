@@ -1,0 +1,432 @@
+/* =====================================================
+   TEM SINAL? - Folha de estilo (style.css)
+   Usada por todas as páginas do site.
+   ===================================================== */
+
+
+/* ---------- 1. CORES ----------
+   Guardamos as cores em variáveis. Se quiser trocar uma cor,
+   muda aqui e o site inteiro acompanha. */
+:root {
+  --azul-escuro: #1F3A5F;
+  --azul: #2E7DD7;
+  --azul-claro: #E8EEF5;
+  --texto: #1E2430;
+  --texto-suave: #4A5568;
+  --borda: #CBD5E1;
+  --verde: #1E7B3A;
+  --verde-claro: #E3F4E8;
+  --laranja: #8A5A00;
+  --laranja-claro: #FFF3D6;
+  --cinza: #5B6472;
+  --cinza-claro: #ECEFF3;
+  --vermelho: #B42318;
+}
+
+
+/* ---------- 2. BASE ----------
+   Usamos "rem" no tamanho das letras. Assim, quando o botão A+ ou A-
+   muda o tamanho da letra da página, todos os textos acompanham. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: white;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+/* Centraliza o conteúdo e limita a largura em telas grandes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+h1 { font-size: 2rem; color: var(--azul-escuro); margin-bottom: 0.75rem; }
+h2 { font-size: 1.4rem; color: var(--azul-escuro); margin: 2rem 0 0.5rem; }
+h3 { font-size: 1.1rem; color: var(--azul-escuro); }
+p  { margin-bottom: 0.75rem; }
+a  { color: var(--azul); }
+img { max-width: 100%; }
+
+.subtitulo { font-size: 1.15rem; color: var(--texto-suave); margin-bottom: 1.5rem; }
+.centro { text-align: center; margin-top: 2rem; }
+.erro { color: var(--vermelho); font-weight: bold; }
+.dica { color: var(--texto-suave); font-size: 0.95rem; }
+
+/* Os exemplos de CEP (São Paulo, Cunha...) parecem links */
+.dica button {
+  background: none;
+  border: none;
+  color: var(--azul);
+  text-decoration: underline;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+
+/* ---------- 3. ACESSIBILIDADE: FOCO NO TECLADO ----------
+   Quem navega com a tecla Tab vê um contorno azul no item selecionado. */
+:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 3px;
+}
+
+
+/* ---------- 4. CABEÇALHO E MENU ----------
+   Usamos flexbox para colocar logo e menu lado a lado. */
+.topo {
+  background: var(--azul-escuro);
+  padding: 0.75rem 0;
+}
+
+.topo .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.marca img { width: 2.5rem; }
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Sublinha o link da página em que a pessoa está */
+.menu a.ativo { border-bottom: 2px solid white; }
+
+/* Botões A-, A+ e Contraste */
+.acessibilidade button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+
+/* ---------- 5. BOTÕES ---------- */
+.botao {
+  display: inline-block;
+  background: var(--azul-escuro);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao:hover { background: var(--azul); }
+
+.botao.grande { font-size: 1.15rem; padding: 0.9rem 2.25rem; }
+
+/* No menu escuro, o botão "Registrar demanda" fica branco */
+.menu .botao { background: white; color: var(--azul-escuro); }
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/* ---------- 6. TELA INICIAL ----------
+   Usamos grid para dividir a tela em colunas. */
+
+/* Texto + busca de um lado, ilustração do outro */
+.destaque {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Campo do CEP com o botão Buscar dentro */
+.campo-cep {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 30rem;
+  background: var(--azul-claro);
+  border: 2px solid var(--borda);
+  border-radius: 30px;
+  padding: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.campo-cep input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
+
+/* Os 4 tipos de conexão, um ao lado do outro */
+.tipos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.tipo {
+  background: var(--azul-claro);
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.tipo img { width: 4rem; }
+
+.tipo p { font-size: 0.95rem; color: var(--texto-suave); }
+
+/* Faixa "Ainda não encontrou uma opção?" */
+.aviso {
+  display: block;
+  background: var(--azul-escuro);
+  color: white;
+  text-align: center;
+  border-radius: 14px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+
+/* ---------- 7. RESULTADOS ---------- */
+.local { font-size: 1.1rem; }
+
+.resumo {
+  background: var(--laranja-claro);
+  border-left: 5px solid var(--laranja);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Os 4 cartões de resultado */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  border: 2px solid var(--borda);
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.card img { width: 3.5rem; }
+
+.card .operadoras { font-weight: bold; }
+
+.card .obs { font-size: 0.9rem; color: var(--texto-suave); }
+
+/* Cartão sem nenhuma operadora fica cinza */
+.card.indisponivel { background: var(--cinza-claro); }
+
+/* Selo de status. O JavaScript coloca a classe conforme o status:
+   verde = Disponível, laranja = Limitada, cinza = Não encontrado */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.badge.disponivel     { background: var(--verde-claro);   color: var(--verde); }
+.badge.limitada       { background: var(--laranja-claro); color: var(--laranja); }
+.badge.nao-encontrado { background: var(--cinza-claro);   color: var(--cinza); }
+
+.regional { font-size: 0.9rem; color: var(--texto-suave); }
+
+
+/* ---------- 8. REGISTRAR DEMANDA ---------- */
+.form-demanda {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 30rem;
+}
+
+.form-demanda select {
+  padding: 0.8rem;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.checkbox { display: flex; gap: 0.6rem; }
+
+.sucesso {
+  background: var(--verde-claro);
+  color: var(--verde);
+  border-left: 5px solid var(--verde);
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+
+/* ---------- 9. MAPA DE DEMANDA ---------- */
+.controle-camada { margin-bottom: 1rem; }
+
+.controle-camada button {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--azul-escuro);
+  border-radius: 30px;
+  background: white;
+  color: var(--azul-escuro);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Botão da visualização escolhida fica preenchido */
+.controle-camada button.ativo { background: var(--azul-escuro); color: white; }
+
+/* Mapa de um lado, legenda e ranking do outro */
+.mapa-area {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.25rem;
+}
+
+#mapa {
+  height: 32rem;
+  border: 2px solid var(--borda);
+  border-radius: 14px;
+}
+
+.legenda, .ranking {
+  background: var(--azul-claro);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.legenda ul { list-style: none; }
+
+.bolinha {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.ranking ol { margin-left: 1.25rem; }
+
+
+/* ---------- 10. PÁGINA SOBRE ---------- */
+.texto { max-width: 48rem; }
+
+.texto ul { margin: 0 0 1rem 1.5rem; }
+
+
+/* ---------- 11. RODAPÉ ---------- */
+.rodape {
+  background: var(--azul-escuro);
+  color: white;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.9rem;
+}
+
+
+/* ---------- 12. ALTO CONTRASTE ----------
+   O botão "Contraste" coloca a classe "alto-contraste" no <body>.
+   Aí trocamos as cores: fundo preto, texto branco e links/botões amarelos,
+   que é a combinação mais fácil de ler para quem tem baixa visão. */
+body.alto-contraste,
+body.alto-contraste .topo,
+body.alto-contraste .rodape,
+body.alto-contraste .tipo,
+body.alto-contraste .card,
+body.alto-contraste .aviso,
+body.alto-contraste .campo-cep,
+body.alto-contraste .resumo,
+body.alto-contraste .legenda,
+body.alto-contraste .ranking {
+  background: black;
+  color: white;
+  border-color: white;
+}
+
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste p,
+body.alto-contraste .card .obs,
+body.alto-contraste .campo-cep input {
+  color: white;
+}
+
+body.alto-contraste a,
+body.alto-contraste .dica button {
+  color: yellow;
+}
+
+body.alto-contraste .botao {
+  background: yellow;
+  color: black;
+}
+
+body.alto-contraste .badge {
+  background: black;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+
+/* ---------- 13. CELULAR ----------
+   "@media" aplica regras só em telas menores.
+   Até 900px: 2 colunas. Até 640px: tudo em uma coluna. */
+@media (max-width: 900px) {
+  .tipos, .cards { grid-template-columns: 1fr 1fr; }
+  .mapa-area { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.6rem; }
+  .destaque { grid-template-columns: 1fr; }
+  .tipos, .cards { grid-template-columns: 1fr; }
+  .campo-cep { flex-direction: column; border-radius: 14px; }
+}
