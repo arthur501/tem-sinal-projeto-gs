@@ -447,3 +447,21 @@ body.alto-contraste .badge {
     font-size: 13px;
     line-height: 1.5;
 }
+
+.integrantes {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: white !important;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.integrantes h3,
+.integrantes p {
+    display: block;
+    color: white !important;
+    text-align: center;
+    margin: 8px 0;
+}
